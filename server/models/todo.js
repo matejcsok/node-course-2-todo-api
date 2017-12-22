@@ -17,15 +17,5 @@ var Todo = mongoose.model('Todo', {
     }
 });
 
-// var newTodo = new Todo({
-//     text: '  Edit this video    '
-//
-// });
-//
-// newTodo.save().then((doc) => {
-//     console.log('Saved todo', doc)
-// }, (e) => {
-//     console.log('Unable to save todo', e)
-// });
 
 module.exports = {Todo};
