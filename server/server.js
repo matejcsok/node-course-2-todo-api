@@ -8,6 +8,8 @@ const {ObjectID} = require('mongodb');
 
 
 var app = express();
+
+// set port to lisen, process.env.port for heroku and 3000 for localhost
 const port = process.env.port || 3000;
 
 app.use(bodyParse.json());
