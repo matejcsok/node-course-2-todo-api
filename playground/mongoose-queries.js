@@ -24,7 +24,7 @@ var userId = '5a3b8b179b22892813ee3f3c';
         console.log(`User ${doc}`)
     },).catch(e => {
         if (!ObjectID.isValid(userId)) {
-            console.log('ID is not valid\n',e.message)
+            console.log('ID is not valid\n',e.message);
         }
     });
 

@@ -10,7 +10,7 @@ const {ObjectID} = require('mongodb');
 var app = express();
 
 // set port to lisen, process.env.port for heroku and 3000 for localhost
-const port = process.env.port || 3000;
+const port = process.env.PORT || 3000;
 
 app.use(bodyParse.json());
 
@@ -31,7 +31,7 @@ app.post('/todos', (req, res) => {
 
 app.get('/todos', (req, res) => {
     Todo.find().then((todos) => {
-        res.send({todos})
+        res.send({todos});
     }, e => {
         res.status(400).send(e);
     });
@@ -71,5 +71,5 @@ app.get('/todos/:id', (req, res) => {
 
 
 app.listen(port, () => {
-    console.log('Started on port: ', port)
+    console.log('Started on port: ', port);
 });
